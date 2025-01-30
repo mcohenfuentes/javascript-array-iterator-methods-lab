@@ -229,7 +229,10 @@ Hint: Use the String.prototype.split() method to separate the first and last
 
 // Complete the exercise in the space below:
 
-const firstLast = people.map
+const firstLast = people.map((person) => {
+    const [last, first] = person.split(', ')
+    return `${last}, ${first}`
+});
 
 // Check your work:
 console.log('Exercise 5 my result: ', firstLast);
