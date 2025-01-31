@@ -131,7 +131,11 @@ Hint: Return a new object literal from the callback that looks like:
 */
 
 const inventorNames = inventors.map((inventor) => {
-    return `${inventor.first}, ${inventor.last}`
+    // const inventorObj = {}
+    // inventorObj.first = inventor.first
+    // inventorObj.last = inventor.last
+    //return inventorObj
+    return {first:inventor.first, last:inventor.last}
 })
 
 //let inventorNames = [];
@@ -140,20 +144,20 @@ const inventorNames = inventors.map((inventor) => {
 
 // Check your work:
 console.log('Exercise 2 my result: ', inventorNames);
-// console.log('Exercise 2 correct result: ', [
-//   { first: 'Albert', last: 'Einstein' },
-//   { first: 'Isaac', last: 'Newton' },
-//   { first: 'Galileo', last: 'Galilei' },
-//   { first: 'Marie', last: 'Curie' },
-//   { first: 'Johannes', last: 'Kepler' },
-//   { first: 'Nicolaus', last: 'Copernicus' },
-//   { first: 'Max', last: 'Planck' },
-//   { first: 'Katherine', last: 'Blodgett' },
-//   { first: 'Ada', last: 'Lovelace' },
-//   { first: 'Sarah E.', last: 'Goode' },
-//   { first: 'Lise', last: 'Meitner' },
-//   { first: 'Hanna', last: 'Hammarström' },
-// ]);
+console.log('Exercise 2 correct result: ', [
+  { first: 'Albert', last: 'Einstein' },
+  { first: 'Isaac', last: 'Newton' },
+  { first: 'Galileo', last: 'Galilei' },
+  { first: 'Marie', last: 'Curie' },
+  { first: 'Johannes', last: 'Kepler' },
+  { first: 'Nicolaus', last: 'Copernicus' },
+  { first: 'Max', last: 'Planck' },
+  { first: 'Katherine', last: 'Blodgett' },
+  { first: 'Ada', last: 'Lovelace' },
+  { first: 'Sarah E.', last: 'Goode' },
+  { first: 'Lise', last: 'Meitner' },
+  { first: 'Hanna', last: 'Hammarström' },
+]);
 
 
 /*
@@ -231,7 +235,7 @@ Hint: Use the String.prototype.split() method to separate the first and last
 
 const firstLast = people.map((person) => {
     const [last, first] = person.split(', ')
-    return `${last}, ${first}`
+    return `${first}, ${last}`
 });
 
 // Check your work:
